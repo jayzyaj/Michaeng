@@ -131,11 +131,11 @@ Block.propTypes = {
   shadow: PropTypes.bool,
   color: PropTypes.string,
   space: PropTypes.string,
-  padding: PropTypes.any,
-  margin: PropTypes.any,
+  padding: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+  margin: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
   animated: PropTypes.bool,
   wrap: PropTypes.bool,
-  style: PropTypes.any,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   children: PropTypes.node,
 };
 

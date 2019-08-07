@@ -88,15 +88,21 @@ const Button = ({
 };
 
 Button.propTypes = {
-  style: PropTypes.any,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   opacity: PropTypes.number,
   gradient: PropTypes.bool,
   color: PropTypes.string,
   startColor: PropTypes.string,
   endColor: PropTypes.string,
-  end: PropTypes.object,
-  start: PropTypes.object,
-  locations: PropTypes.array,
+  end: PropTypes.shape({
+    x: PropTypes.number,
+    y: PropTypes.number,
+  }),
+  start: PropTypes.shape({
+    x: PropTypes.number,
+    y: PropTypes.number,
+  }),
+  locations: PropTypes.arrayOf(PropTypes.number),
   shadow: PropTypes.bool,
   disabled: PropTypes.bool,
   children: PropTypes.node,

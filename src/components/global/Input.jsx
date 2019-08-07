@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import React, { useState } from 'react';
 import {
   StyleSheet,
@@ -115,11 +116,11 @@ const Input = ({
 
 Input.propTypes = {
   label: PropTypes.string,
-  error: PropTypes.any,
+  error: PropTypes.shape({}),
   secure: PropTypes.bool,
-  rightLabel: PropTypes.any,
-  style: PropTypes.any,
-  rightStyle: PropTypes.any,
+  rightLabel: PropTypes.string,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  rightStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onRightPress: PropTypes.func,
   keyboardType: PropTypes.string,
 };

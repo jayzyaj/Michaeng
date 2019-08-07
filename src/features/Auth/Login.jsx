@@ -157,7 +157,8 @@ Login.propTypes = {
   }).isRequired,
   _requestLogin: PropTypes.func.isRequired,
   auth: PropTypes.shape({
-    auth: PropTypes.bool.isRequired,
+    isLoading: PropTypes.bool.isRequired,
+    error: PropTypes.string.isRequired,
   }).isRequired,
 };
 

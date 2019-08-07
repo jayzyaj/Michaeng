@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 import {
   Text,
   StyleSheet,
   Platform,
-} from "react-native";
+} from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
   COLORS,
   FONTS,
   SIZES,
-} from "../../constants/themes";
+} from '../../constants/themes';
 
 const styles = StyleSheet.create({
   // default styles
@@ -20,23 +20,23 @@ const styles = StyleSheet.create({
   },
   // variations
   regular: {
-    fontWeight: "normal",
+    fontWeight: 'normal',
   },
   bold: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   semibold: {
-    fontWeight: "500",
+    fontWeight: '500',
   },
   medium: {
-    fontWeight: "500",
+    fontWeight: '500',
   },
   light: {
-    fontWeight: "200",
+    fontWeight: '200',
   },
   // position
-  center: { textAlign: "center" },
-  right: { textAlign: "right" },
+  center: { textAlign: 'center' },
+  right: { textAlign: 'right' },
   // colors
   accent: { color: COLORS.accent },
   primary: { color: COLORS.primary },
@@ -159,14 +159,14 @@ Typography.propTypes = {
   bold: PropTypes.bool,
   semibold: PropTypes.bool,
   medium: PropTypes.bool,
-  weight: PropTypes.any,
+  weight: PropTypes.number,
   light: PropTypes.bool,
   center: PropTypes.bool,
   right: PropTypes.bool,
   spacing: PropTypes.number, // letter-spacing
   height: PropTypes.number, // line-height
   color: PropTypes.string,
-  accent: PropTypes.object,
+  accent: PropTypes.shape({}),
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   tertiary: PropTypes.bool,

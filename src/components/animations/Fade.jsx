@@ -58,7 +58,7 @@ const Fade = memo(({
 
 Fade.propTypes = {
   visible: PropTypes.bool,
-  style: PropTypes.any,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   children: PropTypes.node.isRequired,
 };
 
